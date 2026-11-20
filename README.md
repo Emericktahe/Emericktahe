@@ -1,11 +1,30 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:000000,20:050510,60:7b2ff7,100:00f0ff&height=400&section=header&text=E%20M%20E&fontSize=150&fontColor=00f0ff&fontAlignY=42&desc=◈%20Emerick%20Tahe%20◈%20Junior%20Developer%20◈%20Côte%20d'Ivoire%20🌍&descSize=20&descColor=cccccc&descAlignY=65&animation=fadeIn&stroke=00f0ff&strokeWidth=3"/>
+<!-- GIF NEON CITY BACKGROUND -->
+<a href="https://github.com/Emericktahe">
+  <img width="100%" src="https://media.giphy.com/media/l3vR85PnGsBwu1PFK/giphy.gif" style="opacity:0.7"/>
+</a>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=900&size=28&duration=2000&pause=500&color=00F0FF&center=true&vCenter=true&width=800&lines=⚡+Flutter+%26+Dart+Mobile+Developer;🔥+Laravel+%7C+PHP+%7C+SQL+Backend;🌍+Proudly+from+Côte+d'Ivoire;🚀+Building+apps+that+change+lives;💡+Clean+Code+is+my+religion;🏆+Future+Top+Dev+of+Africa;👾+EME+—+The+Code+Never+Stops" alt="Typing SVG"/>
+<!-- OVERLAY NEON TITLE -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:00000099,50:0d001a99,100:00000099&height=120&text=◤%20E%20M%20E%20◢&fontSize=90&fontColor=00f0ff&fontAlignY=65&animation=blinking&stroke=7b2ff7&strokeWidth=2"/>
+
+<!-- NEON LINE TOP -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:00f0ff,25:7b2ff7,50:00f0ff,75:7b2ff7,100:00f0ff&height=3"/>
+
+<!-- NEON CITY WAVE -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,30:0a0020,60:1a0040,80:7b2ff7,100:00f0ff&height=180&section=header&text=Emerick%20Tahe&fontSize=52&fontColor=ffffff&fontAlignY=55&desc=Junior%20Developer%20%7C%20Côte%20d'Ivoire%20🌍&descSize=17&descColor=aaaaaa&descAlignY=78&animation=fadeIn"/>
+
+<!-- NEON LINE BOTTOM -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:00f0ff,25:7b2ff7,50:00f0ff,75:7b2ff7,100:00f0ff&height=3"/>
 
 <br/>
 
+<!-- TYPING ORBITRON FONT = NEON CITY VIBE -->
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=900&size=24&duration=2000&pause=600&color=00F0FF&center=true&vCenter=true&width=800&lines=⚡+FLUTTER+%26+DART+DEVELOPER;🔥+LARAVEL+%7C+PHP+%7C+SQL;🌍+PROUDLY+FROM+CÔTE+D'IVOIRE;🚀+BUILDING+APPS+THAT+CHANGE+LIVES;💡+CLEAN+CODE+IS+MY+RELIGION;🏆+FUTURE+TOP+DEV+OF+AFRICA;👾+EME+—+THE+CODE+NEVER+STOPS" alt="Typing SVG"/>
+
+<br/>
+
+<!-- BADGES -->
 [![committers.top badge](https://user-badge.committers.top/ivory_coast_private/Emericktahe.svg)](https://user-badge.committers.top/ivory_coast_private/Emericktahe)
 &nbsp;
 <img src="https://komarev.com/ghpvc/?username=Emericktahe&color=7b2ff7&style=for-the-badge&label=👁️+VIEWS"/>
@@ -13,6 +32,10 @@
 <img src="https://img.shields.io/github/followers/Emericktahe?color=00f0ff&style=for-the-badge&logo=github&label=FOLLOWERS"/>
 &nbsp;
 <img src="https://img.shields.io/github/stars/Emericktahe?affiliations=OWNER&color=ffcc00&style=for-the-badge&logo=github&label=STARS"/>
+
+<!-- NEON SEPARATOR -->
+<br/>
+<img width="80%" src="https://capsule-render.vercel.app/api?type=rect&color=0:00f0ff00,50:00f0ff,100:00f0ff00&height=1"/>
 
 </div>
 
