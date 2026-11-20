@@ -1,7 +1,7 @@
 <div align="center">
 
-<!-- GIF ESPACE ANIMÉ -->
-<img width="100%" src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif"/>
+<!-- GIF GALAXIE ÉTOILES -->
+<img width="100%" src="https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif"/>
 
 <!-- TITRE SPATIAL -->
 <img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:000000,30:0a0020,60:1a0050,100:7b2ff7&height=280&section=header&text=E%20M%20E&fontSize=130&fontColor=ffffff&fontAlignY=42&desc=◈%20Emerick%20Tahe%20◈%20Junior%20Developer%20◈%20Côte%20d'Ivoire%20🌍&descSize=18&descColor=aaaaaa&descAlignY=65&animation=fadeIn&stroke=7b2ff7&strokeWidth=3"/>
