@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- BANNIERE SVG CUSTOM -->
-<img width="100%" src="./assets/banner.svg"/>
+<img width="100%" src="https://raw.githubusercontent.com/Emericktahe/Emericktahe/main/assets/banner.svg"/>
 
 <br/>
 
