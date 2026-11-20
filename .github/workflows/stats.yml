@@ -1,0 +1,23 @@
+name: 📊 Update Stats
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Update GitHub Stats Cache
+        run: |
+          echo "Stats refreshed at $(date)" > .stats-last-update
+          git config user.name "EME Bot"
+          git config user.email "actions@github.com"
+          git add .
+          git diff --staged --quiet || git commit -m "📊 Auto-refresh stats $(date +'%Y-%m-%d %H:%M')"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
