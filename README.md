@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- BANNIERE GTA VI STYLE -->
-<img width="100%" src="https://raw.githubusercontent.com/Emericktahe/Emericktahe/main/assets/banner.jpg"/>
+<img width="100%" src="https://raw.githubusercontent.com/Emericktahe/Emericktahe/main/assets/banner.png"/>
 
 <!-- TYPING GTA VIBE -->
 <img src="https://readme-typing-svg.demolab.com?font=Impact&weight=900&size=26&duration=2000&pause=600&color=FF4080&center=true&vCenter=true&width=800&lines=🎮+FLUTTER+%26+DART+DEVELOPER;🔥+LARAVEL+%7C+PHP+%7C+SQL;🌴+CÔTE+D'IVOIRE+—+MIAMI+VIBES;🚀+BUILDING+APPS+THAT+HIT+DIFFERENT;⚡+SHIP+FAST.+LEARN+ALWAYS." alt="Typing SVG"/>
