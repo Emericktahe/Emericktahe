@@ -1,28 +1,16 @@
 <div align="center">
 
-<!-- BANNIERE CHIC MINIMALISTE -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=soft&color=0:0d0d0d,50:0d0d1a,100:0d0d0d&height=220&section=header&text=Emerick%20Tahe&fontSize=70&fontColor=ffffff&fontAlignY=45&desc=Junior%20Developer%20%E2%80%94%20Flutter%20%C2%B7%20Laravel%20%C2%B7%20SQL%20%E2%80%94%20C%C3%B4te%20d%27Ivoire%20%F0%9F%8C%8D&descSize=16&descColor=888888&descAlignY=68&animation=fadeIn"/>
-
-<!-- LIGNE FINE DÉGRADÉE -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0d0d0d,30:7b2ff7,50:a78bfa,70:7b2ff7,100:0d0d0d&height=2"/>
+<!-- BANNIERE SVG CUSTOM -->
+<img width="100%" src="./assets/banner.svg"/>
 
 <br/>
 
-<!-- TYPING MINIMALISTE -->
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=300&size=18&duration=3000&pause=800&color=888888&center=true&vCenter=true&width=600&lines=Flutter+%26+Dart+%E2%80%94+Mobile+Developer;Laravel+%7C+PHP+%7C+SQL+%E2%80%94+Backend;Building+clean+apps+from+C%C3%B4te+d%27Ivoire;Open+to+work+%26+collaborations" alt="Typing SVG"/>
-
-<br/>
-
-<!-- BADGES MINIMALISTES -->
+<!-- BADGES -->
 [![committers.top badge](https://user-badge.committers.top/ivory_coast_private/Emericktahe.svg)](https://user-badge.committers.top/ivory_coast_private/Emericktahe)
 &nbsp;
 <img src="https://komarev.com/ghpvc/?username=Emericktahe&color=7b2ff7&style=flat-square&label=views"/>
 &nbsp;
 <img src="https://img.shields.io/github/followers/Emericktahe?color=a78bfa&style=flat-square&logo=github&label=followers"/>
-
-<br/><br/>
-<!-- LIGNE FINE BAS -->
-<img width="60%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0d0d0d,50:7b2ff7,100:0d0d0d&height=1"/>
 
 </div>
 
