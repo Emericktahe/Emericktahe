@@ -1,7 +1,10 @@
 <div align="center">
 
-<!-- BANNIERE SVG CUSTOM -->
-<img width="100%" src="https://raw.githubusercontent.com/Emericktahe/Emericktahe/main/assets/banner.svg"/>
+<!-- BANNIERE GTA VI STYLE -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0010,20:3d0050,50:7a1060,75:ff4080,100:ff9500&height=280&section=header&text=EMERICK%20TAHE&fontSize=75&fontColor=ffffff&fontAlignY=42&desc=Junior%20Developer%20%E2%80%94%20Flutter%20%C2%B7%20Laravel%20%C2%B7%20SQL%20%E2%80%94%20C%C3%B4te%20d%27Ivoire%20%F0%9F%8C%8D&descSize=18&descColor=ffccdd&descAlignY=62&animation=fadeIn&stroke=ff4080&strokeWidth=2"/>
+
+<!-- TYPING GTA VIBE -->
+<img src="https://readme-typing-svg.demolab.com?font=Impact&weight=900&size=26&duration=2000&pause=600&color=FF4080&center=true&vCenter=true&width=800&lines=🎮+FLUTTER+%26+DART+DEVELOPER;🔥+LARAVEL+%7C+PHP+%7C+SQL;🌴+CÔTE+D'IVOIRE+—+MIAMI+VIBES;🚀+BUILDING+APPS+THAT+HIT+DIFFERENT;⚡+SHIP+FAST.+LEARN+ALWAYS." alt="Typing SVG"/>
 
 <br/>
 
