@@ -1,268 +1,295 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340">
 <defs>
 
-  <!-- FOND SPATIAL -->
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#000000"/>
-    <stop offset="0.4" stop-color="#05001a"/>
-    <stop offset="0.8" stop-color="#0a0030"/>
-    <stop offset="1" stop-color="#000000"/>
+  <!-- FOND GTA VI — SUNSET MIAMI -->
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0"   stop-color="#0a0010"/>
+    <stop offset="0.3" stop-color="#1a0030"/>
+    <stop offset="0.6" stop-color="#3d0050"/>
+    <stop offset="0.8" stop-color="#7a1060"/>
+    <stop offset="1"   stop-color="#ff4080"/>
   </linearGradient>
 
-  <!-- DÉGRADÉ NOM -->
-  <linearGradient id="nameGrad" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0" stop-color="#ffffff"/>
-    <stop offset="0.5" stop-color="#a78bfa"/>
-    <stop offset="1" stop-color="#00f0ff"/>
+  <!-- SOLEIL COUCHANT -->
+  <radialGradient id="sun" cx="0.5" cy="1.1" r="0.7">
+    <stop offset="0"   stop-color="#ff9500" stop-opacity="0.9"/>
+    <stop offset="0.3" stop-color="#ff4080" stop-opacity="0.6"/>
+    <stop offset="0.6" stop-color="#cc00ff" stop-opacity="0.3"/>
+    <stop offset="1"   stop-color="#0a0010" stop-opacity="0"/>
+  </radialGradient>
+
+  <!-- DÉGRADÉ NOM GTA -->
+  <linearGradient id="nameGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0"   stop-color="#ff9500"/>
+    <stop offset="0.4" stop-color="#ff4080"/>
+    <stop offset="0.8" stop-color="#cc00ff"/>
+    <stop offset="1"   stop-color="#00f0ff"/>
   </linearGradient>
 
   <!-- DÉGRADÉ LIGNE -->
   <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0" stop-color="#00000000"/>
-    <stop offset="0.2" stop-color="#7b2ff7"/>
-    <stop offset="0.5" stop-color="#00f0ff"/>
-    <stop offset="0.8" stop-color="#7b2ff7"/>
-    <stop offset="1" stop-color="#00000000"/>
+    <stop offset="0"   stop-color="#ff950000"/>
+    <stop offset="0.3" stop-color="#ff4080"/>
+    <stop offset="0.5" stop-color="#ff9500"/>
+    <stop offset="0.7" stop-color="#ff4080"/>
+    <stop offset="1"   stop-color="#ff950000"/>
   </linearGradient>
 
-  <!-- GLOW VIOLET -->
-  <radialGradient id="glowLeft" cx="0.25" cy="0.5" r="0.5">
-    <stop offset="0" stop-color="#7b2ff7" stop-opacity="0.25"/>
-    <stop offset="1" stop-color="#7b2ff7" stop-opacity="0"/>
-  </radialGradient>
-
-  <!-- GLOW CYAN -->
-  <radialGradient id="glowRight" cx="0.85" cy="0.4" r="0.45">
-    <stop offset="0" stop-color="#00f0ff" stop-opacity="0.15"/>
-    <stop offset="1" stop-color="#00f0ff" stop-opacity="0"/>
-  </radialGradient>
-
-  <!-- GRILLE POINTS -->
-  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-    <circle cx="1.5" cy="1.5" r="1" fill="#ffffff" fill-opacity="0.06"/>
+  <!-- GRILLE PERSPECTIVE SOL -->
+  <pattern id="gridFloor" width="60" height="60" patternUnits="userSpaceOnUse">
+    <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#ff408030" stroke-width="0.5"/>
   </pattern>
 
-  <!-- FILTRE GLOW -->
-  <filter id="glow">
+  <!-- FILTRE GLOW CHAUD -->
+  <filter id="glowHot">
+    <feGaussianBlur stdDeviation="4" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+
+  <filter id="glowName">
+    <feGaussianBlur stdDeviation="8" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+
+  <filter id="glowSoft">
     <feGaussianBlur stdDeviation="3" result="blur"/>
     <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
 
-  <filter id="glowStrong">
-    <feGaussianBlur stdDeviation="6" result="blur"/>
-    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-
   <style>
-    /* ÉTOILES */
-    .star { animation: twinkle 3s ease-in-out infinite; fill: #ffffff; }
-    .s1 { animation-delay: 0s; }
-    .s2 { animation-delay: 0.5s; }
-    .s3 { animation-delay: 1s; }
-    .s4 { animation-delay: 1.5s; }
-    .s5 { animation-delay: 2s; }
-    .s6 { animation-delay: 2.5s; }
-    @keyframes twinkle {
-      0%, 100% { opacity: 0.2; r: 1; }
-      50% { opacity: 1; r: 2; }
+    /* PALMIERS */
+    .palm { animation: sway 4s ease-in-out infinite; transform-origin: bottom center; }
+    .palm1 { animation-delay: 0s; }
+    .palm2 { animation-delay: 1s; }
+    @keyframes sway {
+      0%,100% { transform: rotate(-2deg); }
+      50%      { transform: rotate(2deg); }
     }
 
-    /* PLANÈTES */
-    .planet1 { animation: orbit1 20s linear infinite; }
-    .planet2 { animation: orbit2 14s linear infinite; }
-    @keyframes orbit1 {
-      0%   { transform: translate(1050px, 80px) rotate(0deg) translateX(40px); }
-      100% { transform: translate(1050px, 80px) rotate(360deg) translateX(40px); }
-    }
-    @keyframes orbit2 {
-      0%   { transform: translate(1100px, 200px) rotate(0deg) translateX(25px); }
-      100% { transform: translate(1100px, 200px) rotate(-360deg) translateX(25px); }
+    /* LIGNES GRILLE SOL */
+    .gridLine { animation: gridMove 3s linear infinite; }
+    @keyframes gridMove {
+      0%   { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 60; }
     }
 
-    /* ANNEAU PLANÈTE */
-    .ring { animation: ringPulse 4s ease-in-out infinite; }
-    @keyframes ringPulse {
-      0%, 100% { opacity: 0.5; }
-      50% { opacity: 1; }
+    /* SOLEIL PULSE */
+    .sunPulse { animation: sunAnim 3s ease-in-out infinite; }
+    @keyframes sunAnim {
+      0%,100% { opacity: 0.85; r: 55; }
+      50%      { opacity: 1;    r: 60; }
     }
 
-    /* LIGNE NÉON */
-    .neonLine { animation: neonPulse 2.5s ease-in-out infinite; }
-    @keyframes neonPulse {
-      0%, 100% { opacity: 0.6; }
-      50% { opacity: 1; }
+    /* LIGNES SOLEIL */
+    .sunLine { animation: sunLineFade 2s ease-in-out infinite; }
+    @keyframes sunLineFade {
+      0%,100% { opacity: 0.4; }
+      50%      { opacity: 0.9; }
     }
 
-    /* TEXTE PRINCIPAL */
+    /* NOM PRINCIPAL */
     .nameText {
-      font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+      font-family: Impact, 'Arial Black', sans-serif;
       font-weight: 900;
-      font-size: 82px;
+      font-size: 96px;
       fill: url(#nameGrad);
-      letter-spacing: 8px;
-      filter: url(#glowStrong);
+      letter-spacing: 12px;
+      filter: url(#glowName);
     }
 
-    /* ALIAS -->
+    /* ALIAS TAG -->
     .aliasText {
       font-family: 'Courier New', monospace;
-      font-size: 16px;
-      fill: #7b2ff7;
-      letter-spacing: 4px;
+      font-size: 15px;
+      fill: #ff9500;
+      letter-spacing: 6px;
+      opacity: 0.9;
     }
 
     /* SOUS-TITRE */
     .subText {
-      font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
-      font-weight: 300;
-      font-size: 20px;
-      fill: #aaaaaa;
-      letter-spacing: 2px;
+      font-family: 'Arial Narrow', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      fill: #ffccdd;
+      letter-spacing: 4px;
     }
 
-    /* BADGES PILLS */
+    /* PILLS -->
     .pillText {
-      font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      fill: #e0e0ff;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
 
-    /* CURSEUR CLIGNOTANT */
-    .cursor { animation: blink 1s steps(1) infinite; fill: #00f0ff; }
+    /* LIGNE NÉON -->
+    .neonLine { animation: neonPulse 2s ease-in-out infinite; }
+    @keyframes neonPulse {
+      0%,100% { opacity: 0.7; }
+      50%      { opacity: 1; }
+    }
+
+    /* ÉTOILES -->
+    .star { animation: twinkle 3s ease-in-out infinite; }
+    .s1 { animation-delay: 0s; }
+    .s2 { animation-delay: 0.7s; }
+    .s3 { animation-delay: 1.4s; }
+    .s4 { animation-delay: 2.1s; }
+    @keyframes twinkle {
+      0%,100% { opacity: 0.3; }
+      50%      { opacity: 1; }
+    }
+
+    /* CURSEUR -->
+    .cursor { animation: blink 1s steps(1) infinite; }
     @keyframes blink { 50% { opacity: 0; } }
 
-    /* LIGNE CODE */
-    .codeText {
-      font-family: 'Courier New', monospace;
-      font-size: 14px;
-      fill: #00f0ff;
-      opacity: 0.7;
-    }
-
-    /* PARTICULES FLOTTANTES */
-    .particle { animation: float 6s ease-in-out infinite; }
-    .p1 { animation-delay: 0s; }
-    .p2 { animation-delay: 1s; }
-    .p3 { animation-delay: 2s; }
-    .p4 { animation-delay: 3s; }
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); opacity: 0.4; }
-      50% { transform: translateY(-12px); opacity: 1; }
-    }
-
-    /* SCAN LINE */
-    .scanLine { animation: scan 4s linear infinite; }
-    @keyframes scan {
-      0% { transform: translateY(-340px); opacity: 0; }
-      10% { opacity: 0.05; }
-      90% { opacity: 0.05; }
+    /* SCAN LINE -->
+    .scan { animation: scanMove 5s linear infinite; }
+    @keyframes scanMove {
+      0%   { transform: translateY(0);    opacity: 0; }
+      5%   { opacity: 0.08; }
+      95%  { opacity: 0.08; }
       100% { transform: translateY(340px); opacity: 0; }
+    }
+
+    /* PARTICULES -->
+    .spark { animation: sparkFloat 5s ease-in-out infinite; }
+    .sp1 { animation-delay: 0s; }
+    .sp2 { animation-delay: 1s; }
+    .sp3 { animation-delay: 2s; }
+    .sp4 { animation-delay: 3s; }
+    @keyframes sparkFloat {
+      0%,100% { transform: translateY(0) scale(1);   opacity: 0.5; }
+      50%      { transform: translateY(-15px) scale(1.5); opacity: 1; }
     }
   </style>
 </defs>
 
 <!-- FOND -->
 <rect width="1200" height="340" fill="url(#bg)"/>
-<rect width="1200" height="340" fill="url(#grid)"/>
-<rect width="1200" height="340" fill="url(#glowLeft)"/>
-<rect width="1200" height="340" fill="url(#glowRight)"/>
 
-<!-- SCAN LINE EFFET -->
-<rect class="scanLine" width="1200" height="2" fill="#00f0ff"/>
+<!-- SOLEIL COUCHANT -->
+<circle class="sunPulse" cx="600" cy="340" r="55" fill="#ff9500" filter="url(#glowHot)" opacity="0.9"/>
+<circle cx="600" cy="340" r="90" fill="#ff4080" opacity="0.25" filter="url(#glowHot)"/>
+<circle cx="600" cy="340" r="130" fill="#cc00ff" opacity="0.12"/>
 
-<!-- ÉTOILES ANIMÉES -->
-<circle class="star s1" cx="80"  cy="30"  r="1.5"/>
-<circle class="star s2" cx="200" cy="15"  r="1"/>
-<circle class="star s3" cx="350" cy="45"  r="2"/>
-<circle class="star s4" cx="500" cy="20"  r="1.5"/>
-<circle class="star s5" cx="650" cy="50"  r="1"/>
-<circle class="star s6" cx="750" cy="10"  r="2"/>
-<circle class="star s1" cx="150" cy="290" r="1.5"/>
-<circle class="star s2" cx="300" cy="310" r="1"/>
-<circle class="star s3" cx="450" cy="300" r="2"/>
-<circle class="star s4" cx="600" cy="320" r="1"/>
-<circle class="star s5" cx="700" cy="280" r="1.5"/>
-<circle class="star s6" cx="820" cy="315" r="1"/>
-<circle class="star s1" cx="50"  cy="160" r="1"/>
-<circle class="star s3" cx="120" cy="200" r="1.5"/>
-<circle class="star s5" cx="780" cy="100" r="1"/>
-<circle class="star s2" cx="830" cy="270" r="1.5"/>
-
-<!-- PLANÈTE 1 — GRANDE VIOLETTE -->
-<g class="planet1">
-  <circle r="0" cx="0" cy="0" fill="none"/>
+<!-- RAYONS SOLEIL -->
+<g class="sunLine" filter="url(#glowHot)">
+  <line x1="600" y1="285" x2="600" y2="260" stroke="#ff9500" stroke-width="2"/>
+  <line x1="560" y1="295" x2="540" y2="272" stroke="#ff9500" stroke-width="1.5"/>
+  <line x1="640" y1="295" x2="660" y2="272" stroke="#ff9500" stroke-width="1.5"/>
+  <line x1="530" y1="320" x2="505" y2="305" stroke="#ff4080" stroke-width="1"/>
+  <line x1="670" y1="320" x2="695" y2="305" stroke="#ff4080" stroke-width="1"/>
 </g>
-<circle cx="1060" cy="90" r="38" fill="#1a0050" stroke="#7b2ff7" stroke-width="1.5" filter="url(#glow)"/>
-<circle cx="1060" cy="90" r="38" fill="none" stroke="#a78bfa" stroke-width="0.5" stroke-opacity="0.5"/>
-<!-- Détails planète -->
-<ellipse cx="1060" cy="90" rx="38" ry="10" fill="none" stroke="#7b2ff7" stroke-width="1" stroke-opacity="0.6" class="ring"/>
-<circle cx="1048" cy="80" r="6" fill="#2a0070" opacity="0.8"/>
-<circle cx="1070" cy="98" r="4" fill="#2a0070" opacity="0.6"/>
 
-<!-- PLANÈTE 2 — PETITE CYAN -->
-<circle cx="1130" cy="230" r="20" fill="#001a20" stroke="#00f0ff" stroke-width="1" filter="url(#glow)"/>
-<ellipse cx="1130" cy="230" rx="28" ry="6" fill="none" stroke="#00f0ff" stroke-width="0.8" stroke-opacity="0.5" class="ring"/>
+<!-- REFLET SOLEIL SUR EAU -->
+<rect x="0" y="280" width="1200" height="60" fill="url(#bg)" opacity="0.5"/>
+<rect x="540" y="282" width="120" height="3" rx="2" fill="#ff9500" opacity="0.6" filter="url(#glowHot)"/>
+<rect x="560" y="290" width="80"  height="2" rx="1" fill="#ff4080" opacity="0.4"/>
+<rect x="575" y="297" width="50"  height="1" rx="1" fill="#ff4080" opacity="0.3"/>
 
-<!-- PLANÈTE 3 — MINUSCULE -->
-<circle cx="980" cy="280" r="8" fill="#0a0020" stroke="#7b2ff7" stroke-width="0.8" opacity="0.7"/>
+<!-- GRILLE SOL PERSPECTIVE -->
+<g opacity="0.25">
+  <!-- Lignes horizontales -->
+  <line x1="0" y1="340" x2="1200" y2="340" stroke="#ff4080" stroke-width="1"/>
+  <line x1="100" y1="310" x2="1100" y2="310" stroke="#ff4080" stroke-width="0.8"/>
+  <line x1="200" y1="295" x2="1000" y2="295" stroke="#ff4080" stroke-width="0.6"/>
+  <line x1="280" y1="285" x2="920"  y2="285" stroke="#ff4080" stroke-width="0.4"/>
+  <!-- Lignes verticales perspective -->
+  <line x1="600" y1="270" x2="0"    y2="340" stroke="#ff4080" stroke-width="0.5"/>
+  <line x1="600" y1="270" x2="200"  y2="340" stroke="#ff4080" stroke-width="0.5"/>
+  <line x1="600" y1="270" x2="400"  y2="340" stroke="#ff4080" stroke-width="0.5"/>
+  <line x1="600" y1="270" x2="800"  y2="340" stroke="#ff4080" stroke-width="0.5"/>
+  <line x1="600" y1="270" x2="1000" y2="340" stroke="#ff4080" stroke-width="0.5"/>
+  <line x1="600" y1="270" x2="1200" y2="340" stroke="#ff4080" stroke-width="0.5"/>
+</g>
 
-<!-- PARTICULES FLOTTANTES -->
-<circle class="particle p1" cx="900" cy="60"  r="2" fill="#7b2ff7" filter="url(#glow)"/>
-<circle class="particle p2" cx="940" cy="150" r="1.5" fill="#00f0ff" filter="url(#glow)"/>
-<circle class="particle p3" cx="870" cy="250" r="2" fill="#a78bfa" filter="url(#glow)"/>
-<circle class="particle p4" cx="920" cy="300" r="1.5" fill="#00f0ff" filter="url(#glow)"/>
+<!-- PALMIER GAUCHE -->
+<g class="palm palm1" transform="translate(80, 340)">
+  <rect x="-5" y="-120" width="10" height="120" rx="5" fill="#1a0030"/>
+  <ellipse cx="0"   cy="-120" rx="40" ry="18" fill="#0d2010" transform="rotate(-20)"/>
+  <ellipse cx="0"   cy="-120" rx="38" ry="16" fill="#0d2010" transform="rotate(20)"/>
+  <ellipse cx="0"   cy="-120" rx="35" ry="15" fill="#0d2010" transform="rotate(60)"/>
+  <ellipse cx="0"   cy="-120" rx="35" ry="15" fill="#0d2010" transform="rotate(-60)"/>
+  <ellipse cx="0"   cy="-120" rx="30" ry="14" fill="#0d2010" transform="rotate(100)"/>
+</g>
+
+<!-- PALMIER DROIT -->
+<g class="palm palm2" transform="translate(1120, 340)">
+  <rect x="-5" y="-100" width="10" height="100" rx="5" fill="#1a0030"/>
+  <ellipse cx="0" cy="-100" rx="35" ry="15" fill="#0d2010" transform="rotate(-20)"/>
+  <ellipse cx="0" cy="-100" rx="33" ry="14" fill="#0d2010" transform="rotate(20)"/>
+  <ellipse cx="0" cy="-100" rx="30" ry="13" fill="#0d2010" transform="rotate(60)"/>
+  <ellipse cx="0" cy="-100" rx="30" ry="13" fill="#0d2010" transform="rotate(-60)"/>
+</g>
+
+<!-- ÉTOILES -->
+<circle class="star s1" cx="100" cy="25"  r="1.5" fill="#ffffff"/>
+<circle class="star s2" cx="250" cy="15"  r="1"   fill="#ffccdd"/>
+<circle class="star s3" cx="400" cy="30"  r="1.5" fill="#ffffff"/>
+<circle class="star s4" cx="150" cy="50"  r="1"   fill="#ffccdd"/>
+<circle class="star s1" cx="800" cy="20"  r="1.5" fill="#ffffff"/>
+<circle class="star s2" cx="950" cy="40"  r="1"   fill="#ffccdd"/>
+<circle class="star s3" cx="1050" cy="18" r="1.5" fill="#ffffff"/>
+<circle class="star s4" cx="1150" cy="35" r="1"   fill="#ffccdd"/>
+<circle class="star s1" cx="700" cy="15"  r="1"   fill="#ffffff"/>
+<circle class="star s3" cx="500" cy="25"  r="1.5" fill="#ffccdd"/>
+
+<!-- SCAN LINE -->
+<rect class="scan" x="0" y="-340" width="1200" height="2" fill="#ff4080"/>
 
 <!-- LIGNE NÉON HAUT -->
 <rect class="neonLine" x="0" y="0" width="1200" height="2" fill="url(#lineGrad)"/>
 
-<!-- LIGNE NÉON BAS -->
-<rect class="neonLine" x="0" y="338" width="1200" height="2" fill="url(#lineGrad)"/>
-
-<!-- LIGNE SÉPARATRICE MILIEU -->
-<rect x="60" y="195" width="700" height="1" fill="url(#lineGrad)" opacity="0.4"/>
+<!-- PARTICULES CHAUDES -->
+<circle class="spark sp1" cx="160" cy="200" r="2" fill="#ff9500" filter="url(#glowSoft)"/>
+<circle class="spark sp2" cx="300" cy="150" r="1.5" fill="#ff4080" filter="url(#glowSoft)"/>
+<circle class="spark sp3" cx="900" cy="180" r="2" fill="#cc00ff" filter="url(#glowSoft)"/>
+<circle class="spark sp4" cx="1050" cy="130" r="1.5" fill="#ff9500" filter="url(#glowSoft)"/>
 
 <!-- CONTENU TEXTE -->
 
 <!-- TAG CODE -->
-<text class="codeText" x="62" y="58">&lt;EME.dev&gt;</text>
+<text class="aliasText" x="62" y="55">// EME.DEV — JUNIOR DEVELOPER</text>
 
 <!-- NOM PRINCIPAL -->
-<text class="nameText" x="58" y="160">EMERICK TAHE</text>
+<text class="nameText" x="55" y="165">EMERICK TAHE</text>
+
+<!-- LIGNE SÉPARATRICE -->
+<rect class="neonLine" x="58" y="178" width="680" height="1.5" fill="url(#lineGrad)"/>
 
 <!-- SOUS-TITRE -->
-<text class="subText" x="64" y="218">Junior Developer  ·  Flutter  ·  Laravel  ·  SQL  ·  Côte d'Ivoire 🌍</text>
+<text class="subText" x="62" y="210">FLUTTER  ·  DART  ·  LARAVEL  ·  PHP  ·  SQL  ·  CÔTE D'IVOIRE 🌍</text>
 
 <!-- PILLS BADGES -->
-<g transform="translate(62, 245)">
-  <!-- Flutter -->
-  <rect x="0" width="80" height="28" rx="14" fill="#ffffff" fill-opacity="0.07" stroke="#00f0ff" stroke-width="0.8" stroke-opacity="0.6"/>
-  <text class="pillText" x="40" y="19" text-anchor="middle">Flutter</text>
+<g transform="translate(62, 232)">
+  <rect x="0"   width="80"  height="26" rx="13" fill="#ff408020" stroke="#ff4080" stroke-width="1"/>
+  <text class="pillText" x="40"  y="18" text-anchor="middle" fill="#ff9500">Flutter</text>
 
-  <!-- Dart -->
-  <rect x="92" width="60" height="28" rx="14" fill="#ffffff" fill-opacity="0.07" stroke="#00f0ff" stroke-width="0.8" stroke-opacity="0.6"/>
-  <text class="pillText" x="122" y="19" text-anchor="middle">Dart</text>
+  <rect x="92"  width="60"  height="26" rx="13" fill="#ff408020" stroke="#ff4080" stroke-width="1"/>
+  <text class="pillText" x="122" y="18" text-anchor="middle" fill="#ff9500">Dart</text>
 
-  <!-- Laravel -->
-  <rect x="164" width="80" height="28" rx="14" fill="#ffffff" fill-opacity="0.07" stroke="#7b2ff7" stroke-width="0.8" stroke-opacity="0.6"/>
-  <text class="pillText" x="204" y="19" text-anchor="middle">Laravel</text>
+  <rect x="164" width="80"  height="26" rx="13" fill="#cc00ff20" stroke="#cc00ff" stroke-width="1"/>
+  <text class="pillText" x="204" y="18" text-anchor="middle" fill="#ffccdd">Laravel</text>
 
-  <!-- PHP -->
-  <rect x="256" width="55" height="28" rx="14" fill="#ffffff" fill-opacity="0.07" stroke="#7b2ff7" stroke-width="0.8" stroke-opacity="0.6"/>
-  <text class="pillText" x="283" y="19" text-anchor="middle">PHP</text>
+  <rect x="256" width="55"  height="26" rx="13" fill="#cc00ff20" stroke="#cc00ff" stroke-width="1"/>
+  <text class="pillText" x="283" y="18" text-anchor="middle" fill="#ffccdd">PHP</text>
 
-  <!-- SQL -->
-  <rect x="323" width="55" height="28" rx="14" fill="#ffffff" fill-opacity="0.07" stroke="#00f0ff" stroke-width="0.8" stroke-opacity="0.6"/>
-  <text class="pillText" x="350" y="19" text-anchor="middle">SQL</text>
+  <rect x="323" width="55"  height="26" rx="13" fill="#ff408020" stroke="#ff4080" stroke-width="1"/>
+  <text class="pillText" x="350" y="18" text-anchor="middle" fill="#ff9500">SQL</text>
 
-  <!-- Open to work -->
-  <rect x="390" width="120" height="28" rx="14" fill="#00f0ff" fill-opacity="0.1" stroke="#00f0ff" stroke-width="0.8"/>
-  <circle cx="408" cy="14" r="4" fill="#00ff88"/>
-  <text class="pillText" x="450" y="19" text-anchor="middle" fill="#00f0ff">Open to work</text>
+  <rect x="390" width="130" height="26" rx="13" fill="#ff950030" stroke="#ff9500" stroke-width="1"/>
+  <circle cx="408" cy="13" r="4" fill="#00ff88"/>
+  <text class="pillText" x="455" y="18" text-anchor="middle" fill="#ff9500">Open to work</text>
 </g>
 
-<!-- TAG FERMETURE + CURSEUR -->
-<text class="codeText" x="62" y="310">&lt;/EME.dev&gt;</text>
-<rect class="cursor" x="152" y="296" width="10" height="16" rx="1"/>
+<!-- TAG FERMETURE -->
+<text class="aliasText" x="62" y="300">// SHIP FAST. LEARN ALWAYS. ⚡</text>
+<rect class="cursor" x="310" y="285" width="10" height="16" rx="1" fill="#ff9500"/>
+
+<!-- LIGNE NÉON BAS -->
+<rect class="neonLine" x="0" y="338" width="1200" height="2" fill="url(#lineGrad)"/>
 
 </svg>
